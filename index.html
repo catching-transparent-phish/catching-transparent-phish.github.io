@@ -14,7 +14,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="index.html">Catching Transparent Phish: Analyzing and Detecting MITM Phishing Toolkits</a>
+    <a class="navbar-brand" href="index.html">Catching Transparent Phish</a>
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ml-auto">
@@ -22,10 +22,7 @@
           <a class="nav-link active" href="#abstract">Abstract</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#section1">Section 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#section2">Section 2</a>
+          <a class="nav-link active" href="#section1">Overview</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#contributors">Contributors</a>
@@ -43,11 +40,16 @@
       <div class="container">
         <div class=="row">
           <div class="col-sm">
-            <h1 class="display-5 text-center">Project Title<br></h1>
+            <h1 class="display-5 text-center">Catching Transparent Phish: Analyzing and Detecting MITM Phishing Toolkits<br></h1>
+	    <br>
+            <h5 class="display-5 text-center">
+		<a href="">ACM SIGSAC Conference on Computer and Communications Security (CCS) 2021</a>
+	    </h5>
           </div>
         </div>
         <br>
         <br>
+	<!--
         <div class=="row">
           <div class="col-md">
             <div class="embed-responsive embed-responsive-16by9">
@@ -55,6 +57,7 @@
             </div>
           </div>
         </div>
+	-->
       </div>
     </div>
 
@@ -63,18 +66,18 @@
         <div class="col-sm">
           <h2 class="text-center">Abstract</h2>
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.</p>
-
-          <p>Nullam rutrum leo quis purus cursus fermentum. Vivamus nec iaculis mi. Suspendisse pharetra eleifend turpis ut dictum. Vivamus nisi tellus, volutpat nec quam sit amet, ornare facilisis est. Fusce semper ultrices aliquet. Morbi sagittis eros ac dui rhoncus, sit amet semper purus varius. Duis finibus turpis orci, eu auctor nunc maximus nec. Curabitur aliquet tincidunt mauris faucibus iaculis. Donec sem orci, placerat quis tempor id, fringilla eu dolor. Etiam ultrices maximus lacus, et suscipit erat suscipit a. Proin est erat, maximus venenatis vestibulum vel, sagittis ac nisl. Proin fermentum ullamcorper tortor, eu rutrum libero mattis eu.</p>
-
-          <p>Pellentesque gravida augue augue, ac posuere lacus accumsan in. Suspendisse vel magna accumsan, porta lorem sed, eleifend massa. Proin auctor euismod ornare. Fusce convallis volutpat magna non laoreet. Quisque nibh nunc, tempus ac lacinia vel, condimentum sed est. Maecenas ultrices nunc eget est interdum semper. Nulla eu varius mi, non euismod enim. Mauris mollis urna ut diam fringilla rhoncus. Nam efficitur sem vel ultrices tempor. Vestibulum hendrerit, nulla vitae tempus ultricies, magna nulla pulvinar dui, eget accumsan ipsum arcu et lacus. Integer vel fringilla tellus. Donec pellentesque blandit elit a luctus. </p>
+          <p>For over a decade, phishing toolkits have been helping attackers automate and streamline their phishing campaigns. Man-in-the- Middle (MITM) phishing toolkits are the latest evolution in this space, where toolkits act as malicious reverse proxy servers of online services, mirroring live content to users while extracting cre- dentials and session cookies in transit. These tools further reduce the work required by attackers, automate the harvesting of 2FA- authenticated sessions, and substantially increase the believability of phishing web pages. </p>
+<p>In this paper, we present the first analysis of MITM phishing toolkits used in the wild. By analyzing and experimenting with these toolkits, we identify intrinsic network-level properties that can be used to identify them. Based on these properties, we develop a machine learning classifier that identifies the presence of such toolkits in online communications with 99.9% accuracy. </p> 
+<p>We conduct a large-scale longitudinal study of MITM phishing toolkits by creating a data-collection framework that monitors and crawls suspicious URLs from public sources. Using this infrastruc- ture, we capture data on 1,220 MITM phishing websites over the course of a year. We discover that MITM phishing toolkits occupy a blind spot in phishing blocklists, with only 43.7% of domains and 18.9% of IP addresses associated with MITM phishing toolkits present on blocklists, leaving unsuspecting users vulnerable to these attacks. Our results show that our detection scheme is resilient to the cloaking mechanisms incorporated by these tools, and is able to detect previously hidden phishing content. Finally, we propose methods that online services can utilize to fingerprint requests origi- nating from these toolkits and stop phishing attempts as they occur.</p>
           <br>
           <br>
         </div>
       </div>
       <div class="row">
         <div class="col-sm">
-          <img  src="img/overview_dummy.png" alt="Method Overview" class="img-fluid">
+	<div style="text-align: center">
+          <img  src="img/mitmToolkitOverview.png" alt="Method Overview" height="340" width="auto">
+	</div>
         </div>
       </div>
     </div>
@@ -82,9 +85,16 @@
     <div class="container section" id="section1">
       <div class="row">
         <div class="col-sm">
-          <h2 class="text-center">Section 1</h2>
+          <h2 class="text-center">What are MITM Phishing Toolkits?</h2>
           <hr>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia. </p>
+          <p> MITM phishing toolkits are the state of the art in phishing attacks today. They function as reverse proxy servers, brokering communication between 
+	      victim users and target web servers, all while harvesting sensitive information from the network data in transit. This design lends itself to increased believability of the phish- ing attack since the returned web pages are live on the target web server and thus indistinguishable to the victim. Additionally, unlike traditional phishing attacks, where believable behavior ceases after the desired information (e.g. credentials and credit card numbers) is acquired, these toolkits persist the victim’s browsing session after authentication is complete. This means users can browse the target website with their authenticated session through the phish- ing server. This puts the victim at ease and increases the timespan that the session cookie is valid, allowing the attacker more time to conduct their desired malicious actions. In this paper, we study three popular MITM phishing toolkits: <a href="https://github.com/kgretzky/evilginx2"> Evilginx</a>, <a href="https://github.com/muraenateam/muraena">Muraena</a>, and <a href="https://github.com/drk1wi/Modlishka">Modlishka</a>.</p>
+
+	<div style="padding:36.25% 0 0 0;position:relative;">
+		<iframe src="https://player.vimeo.com/video/544716265?h=5fe641c120&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;padding-top:2%" title="Evilginx Demo"></iframe>
+	</div>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+
         </div>
       </div>
     </div>
@@ -92,9 +102,18 @@
     <div class="container section" id="section2">
       <div class="row">
         <div class="col-sm">
-          <h2 class="text-center">Section 2</h2>
+          <h2 class="text-center">How we Detect Them</h2>
           <hr>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia. </p>
+          <p> The powerful network architecture of MITM phishing toolkits signifigantly decreases the effectiveness of content-based phishing detection techniques. Additionally, as attackers control all application layer content, JavaScript-based defenses can be easily filtered by attackers. Therefore, we aim to fingerprint the web server rather than the web content. To achieve this, we focus on two categories of network-level features to distinguish MITM phishing toolkits from benign web servers: network timing features, and TLS fingerprinting features. Using these two feature groups, we can reliably detect the presence of MITM phishing toolkits in online communications. Additionally, as these features are fundamental to the architecture of MITM phishing toolkits, attackers can not trivially bypass our fingerprinting. For more in-depth information on our fingerprinting techniques, please see our <a href="">paper</a>.</p>
+	  <p>Utilizing the previously described features, we develop a tool to automatically collect data on, and classify MITM phishing toolkits on the web. We call this tool PHOCA, after the Latin word for “seal.” Seals are aquatic mammals known to hunt hidden prey using vibrations generated by their breathing. Similarly to this hunting technique, PHOCA can detect previously-hidden MITM phishing toolkits using features inherent to their nature, as opposed to visual-cues.
+When provided either a URL or domain-name, PHOCA probes the desired web server to collect the previously mentioned network-level features. PHOCA then uses our trained classifier to determine if the web server is a MITM phishing toolkit. Using this tool, new training data can be easily generated for any future MITM phishing toolkit iteration. Additionally, PHOCA can be integrated into existing anti-phishing workflows to fingerprint active threats.
+</p>
+
+
+	<div style="padding:36.25% 0 0 0;position:relative;">
+		<iframe src="https://player.vimeo.com/video/544725046?h=2d68f08e0e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;padding-top:2%" title="PHOCA Demo"></iframe>
+	</div>
+
         </div>
       </div>
     </div>
@@ -110,23 +129,19 @@
       <br>
 
       <div class="row text-center">
-        <div class="col-lg-4 justify-content-center">
+        <!--<div class="col-lg-4 justify-content-center">-->
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
           <a href="#" target="_blank">
-              <img class="rounded-circle" src="img/contributor_dummy.png" alt="Contributor" width="180" height="180">
+              <img class="rounded-circle" src="img/brian.jpg" alt="Contributor" width="180" height="180">
           </a>
-          <h4><a href="#" target="_blank">Contributor 1</a></h4>
+          <h4><a href="https://briankondracki.com" target="_blank">Brian Kondracki</a></h4>
         </div>
         <div class="col-lg-4">
           <a href="#">
-              <img class="rounded-circle" src="img/contributor_dummy.png" alt="Contributor" width="180" height="180">
+              <img class="rounded-circle" src="img/babak.jpg" alt="Contributor" width="180" height="180">
           </a>
-          <h4><a href="#">Contributor2</a></h4>
-        </div>
-        <div class="col-lg-4">
-          <a href="#" target="_blank">
-              <img class="rounded-circle" src="img/contributor_dummy.png" alt="Contributor" width="180" height="180">
-          </a>
-          <h4><a href="#" target="_blank">Contributor 3</a></h4>
+          <h4><a href="https://www.silverf0x00.com">Babak Amin Azad</a></h4>
         </div>
       </div>
 
@@ -134,16 +149,24 @@
         <div class="col-lg-2"></div>
         <div class="col-lg-4">
           <a href="#" target="_blank">
-              <img class="rounded-circle" src="img/contributor_dummy.png" alt="Contributor" width="180" height="180">
+              <img class="rounded-circle" src="img/alex.jpg" alt="Contributor" width="180" height="180">
           </a>
-          <h4><a href="#" target="_blank">Contributor 4</a></h4>
+          <h4><a href="https://www.cyberphilosopher.org" target="_blank">Oleksii Starov</a></h4>
         </div>
+        <div class="col-lg-4">
+          <a href="#" target="_blank">
+              <img class="rounded-circle" src="img/nick.jpg" alt="Contributor" width="180" height="180">
+          </a>
+          <h4><a href="https://securitee.org" target="_blank">Nick Nikiforakis</a></h4>
+        </div>
+	<!--
         <div class="col-lg-4">
           <a href="#" target="_blank">
             <img class="rounded-circle" src="img/contributor_dummy.png" alt="Contributor" width="180" height="180">
           </a>
           <h4><a href="#" target="_blank">Contributor 5</a></h4>
         </div>
+	-->
         <div class="col-lg-2"></div>
       </div>
 
@@ -163,27 +186,36 @@
           <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
           </svg>
-          <h4>Code</h4>
-          <div class="col-sm text-center">
-            <button type="button" class="btn btn-dark">
-              <img src="img/GitHub-Mark-Light-32px.png" width="20px"> Repository 1
-            </button>
+          <h4>Code & Data</h4>
+          <div class="col-sm text-center" style="padding-bottom:5px">
+		<a href="https://github.com/catching-transparent-phish/phoca" role="button" class="btn btn-dark">
+              <img src="img/GitHub-Mark-Light-32px.png" width="20px"> PHOCA
+            </a>
           </div>
-          <button type="button" class="btn btn-dark">
-            <img src="img/GitHub-Mark-Light-32px.png" width="20px"> Repository 2
-          </button>
+          <div class="col-sm text-center" style="padding-bottom:5px">
+		<a href="https://github.com/catching-transparent-phish/catching-transparent-phish.github.io/blob/main/dataset.zip" role="button" class="btn btn-dark">
+              <img src="img/GitHub-Mark-Light-32px.png" width="20px"> Dataset
+            </a>
+          </div>
+          <div class="col-sm text-center">
+		<a href="" role="button" class="btn btn-dark">
+              <img src="img/GitHub-Mark-Light-32px.png" width="20px"> Data Collection (Coming Soon)
+            </a>
+          </div>
         </div>
+	
+
         <div class="col-sm text-center">
           <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-file-earmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M4 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5.707A1 1 0 0 0 13.707 5L10 1.293A1 1 0 0 0 9.293 1H4zm5 1v3a1 1 0 0 0 1 1h3L9 2z"/>
           </svg>
           <h4>Paper</h4>
-          <button type="button" class="btn btn-dark">
+          <a href="catching_transparent_phish.pdf" role="button" class="btn btn-dark">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"/>
               <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"/>
-            </svg> arXiv
-          </button>
+            </svg> PDF
+          </a>
         </div>
       </div>
       <div class="container">
@@ -199,12 +231,12 @@
             <p>To cite our work, please use:</p>
             <pre class="citation">
               <code>
-     @article{articlename,
-        author    = {Author1 and Author2 and Author3 and Author4 and Author5},
-        title     = {Paper Title},
-        journal   = {arXiv preprint arXiv:TBD},
-        year      = {20XX}
-      } </code>
+	@article{kondracki2021catching,
+	    title={Catching Transparent Phish: Analyzing and Detecting MITM Phishing Toolkits},
+	    author={Kondracki, Brian and Azad, Babak Amin and Starov, Oleksii and Nikiforakis, Nick},
+	    year={2021}
+	}
+		</code>
               </pre>
 
             </div>
@@ -217,16 +249,16 @@
           <div class="row align-items-center h-100">
             <div class="col-md-4 text-center">
               <a href="#" target="_blank">
-                <img src="img/logo_dummy.png" alt="Organization 1" width="240">
+                <img src="img/pragsec.png" alt="Pragsec Lab" width="240">
               </a>
             </div>
             <div class="col-md-4 text-center">
               <a href="#" target="_blank">
-                <img src="img/logo_dummy.png" alt="Organization 2" width="240">
+                <img src="img/sbu.png" alt="Organization 2" width="240">
               </a>
             </div>
             <div class="col-md-4 text-center align-middle">
-                <h5>&copy; Copyright Owner 20XX</h5>
+                <h5>&copy; Copyright PragSec Lab 2021</h5>
                 Website Design: <a href="https://github.com/rjgpinel/dark-academic-website" target="_blank">dark-academic-website</a>
             </div>
           </div>
